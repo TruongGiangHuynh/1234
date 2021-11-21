@@ -1,0 +1,48 @@
+.footer{
+    background-color: $color-gray-drak-1;
+    color: $color-gray-light;
+    font-size: 1.6rem;
+    padding: 10rem 0;
+    &-box{
+        margin-bottom: 2rem;
+        &-logo{
+            width: 20rem;
+            height: auto;
+        }
+    }
+    &__coppyright{
+        border-top: 1px solid $color-gray-light;
+        padding: 2rem 0;
+        text-align: justify;
+    }
+    &-list{
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid $color-gray-light;
+        padding: 2rem 0;
+    }
+    &__item:hover{
+        transform: rotate(5deg) scale(1.1);
+        transition: all .3s;
+    }
+    &__link{
+        &:link,
+        &:visited{
+            color: $color-gray-light;
+            text-decoration: none;
+            font-size: 1.6rem;
+            font-weight: 500;
+            padding: .5rem 1rem;
+            border-radius: 2rem;
+           
+        }
+        &:hover,
+        &:active{
+            color: $color-primary;
+            background-color: rgb(63, 61, 61);
+          
+        }
+
+    }
+}

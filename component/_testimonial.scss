@@ -1,0 +1,46 @@
+.testimonial{
+    border-radius: 100rem;
+    margin: 0 auto;
+    width: 88%;
+    margin-bottom: 2rem;
+    box-shadow: 1rem 2rem 5rem rgba($color-black, .1);
+    padding: 6rem;
+    background-color: rgba($color-white, .1);
+    padding-left: 9rem;
+    transition: all .3s;
+    &__shape{
+        width: 15rem;
+        height: 15rem;
+        background-color: orange;
+        float: left;
+        clip-path: circle(50% at 50% 50%);
+        transform: translateX(-3rem);
+        shape-outside: circle(50% at 50% 50%);
+        &-img{
+            width: 100%;
+            transform: translateY(-2rem);
+            position: relative;
+            
+        }
+    }
+    &__caption{
+        position: absolute;
+        top: 50%;
+        left:50%;
+        transform: translate(-50%,20%);
+        font-size: 1.7rem;
+        text-align: center;
+        opacity: 0;
+        transition: all 0.5s;
+    }
+    &:hover &__caption{
+        opacity: 1;
+        transform: translate(-50%,-50%);
+    }
+    &:hover &__shape-img{
+        filter:blur(0.5rem) brightness(70%);
+        transform: scale(1.1);
+    }
+
+    
+}

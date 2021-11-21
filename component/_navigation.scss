@@ -1,0 +1,124 @@
+.navigation{
+    &__checkbox{
+        display: none;
+       
+    }
+    &__button{
+        background-color: $color-white;
+        width: 7rem;
+        height: 7rem;
+        position: fixed;
+        top:6rem;
+        right: 6rem;
+        border-radius: 50%;
+        z-index: 2000;
+        cursor: pointer;
+        text-align: center;
+        box-shadow: 0 1rem 3rem rgba($color-black, .2);
+    }
+    &__bg{
+        background-image:linear-gradient(to right bottom ,$color-primary-light,$color-primary-dark);
+        width: 7rem;
+        height: 7rem;
+        position: fixed;
+        top:6rem;
+        right: 6rem;
+        border-radius: 50%;
+        z-index: 1000;
+        cursor: pointer;
+        text-align: center;
+        box-shadow: 0 1rem 3rem rgba($color-black, .2);
+        transition: transform .8s;
+    }
+    &__checkbox:checked~&__bg{
+        transform: scale(80);
+    }
+    &__checkbox:checked~&__nav{
+        opacity: 1;
+        width: 100%;
+    }
+    &__nav{
+      
+        width: 0;
+        height: 100vh;
+        position: fixed;
+        top:0;
+        right: 0;
+        z-index: 1500;
+        text-align: center;
+        box-shadow: 0 1rem 3rem rgba($color-black, .2);
+        transition: all .8s;
+        opacity: 0;
+    }
+    &__list{
+        @include absCenter;
+        list-style: none;
+    }
+    &__item{
+        margin: 1rem;
+    }
+    &__link{
+        &:link,
+        &:visited{
+            display: inline-block;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            font-size: 4rem;
+            font-weight: 100;
+            text-transform: uppercase;
+            background-image: radial-gradient(150% 200% ellipse at 115%,$color-white 0%,$color-white 50%,transparent 50%) ;
+            background-size: 252%;
+            transition: all .4s;
+            border-radius: 5rem;
+        }
+        &:hover,
+        &:active{
+            background-position: 100%;
+            background-color: $color-white;
+            color: $color-primary;
+        }
+    }
+    &__icon{
+        position: relative;
+        margin-top: 3.2rem;
+        &,
+        &::after,
+        &::before{
+            width: 3.5rem;
+            height: .3rem;
+            background-color: $color-gray-drak-1;
+            display: inline-block;
+        }
+        &::after,&::before{
+           content: '';
+           position: absolute;
+           left: 0;
+           transition: all .3s;
+        }
+        &::before{
+            top: .8rem;
+        }
+
+        &::after{
+            top: -.8rem;
+        }
+    }
+    &__button:hover &__icon::before{
+        top: 1rem;
+    }
+    &__button:hover &__icon::after{
+        top: -1rem;
+    }
+    &__checkbox:checked+&__button &__icon{
+      background-color: transparent;
+    }
+    &__checkbox:checked+&__button &__icon::before{
+        top: 0;
+        transform: rotate(135deg);
+      }
+      &__checkbox:checked+&__button &__icon::after{
+          top: 0;
+        transform: rotate(-135deg);
+      }
+}

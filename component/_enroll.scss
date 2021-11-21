@@ -1,0 +1,12 @@
+.enroll{
+    background-image: radial-gradient(150% 150% ellipse at -15% ,rgba($color-white,0.8) 50%, transparent 50%), url(http://selftaught.howkteam.vn/img/background2.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 50rem;
+    border-radius: 5rem;
+    box-shadow: 0 1.5rem 2rem rgba($color-black,0.2);
+    &__form{
+        padding: 6rem;
+    }
+
+}

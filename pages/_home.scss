@@ -1,0 +1,35 @@
+.section-about{
+    background-color: $color-gray-light;
+    padding: 25rem 0;
+    margin-top: -25rem;
+    @include respond(phone){
+        margin-top: -45rem;
+    }
+}
+.section-skill{
+    padding: 20rem 0;
+    margin-top: -20rem;
+    clip-path: ellipse(61% 45% at 48% 52%);
+    background-image:linear-gradient( to right bottom, rgba($color-primary-light,0.8),rgba($color-primary-dark,0.8)), 
+    url(http://selftaught.howkteam.vn/img/background2.jpg);
+    background-position: top;
+    background-size: cover;
+    @include respond(phone){
+        margin-top: -30rem;
+        clip-path: ellipse(75% 45% at 51% 48%);
+    }
+}
+.section-couser{
+    background-color: $color-gray-light;
+    padding: 25rem 0 10rem 0;
+    margin-top: -25rem;
+}
+.section-testimonials{
+    position: relative;
+    padding: 5rem 0;
+    
+}
+.section-enroll{
+    padding: 10rem 0;
+    background-image: linear-gradient(to right bottom,$color-primary-light,$color-primary-dark);
+}
